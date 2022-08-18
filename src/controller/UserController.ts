@@ -8,9 +8,9 @@ class UserController{
     const {nome} = req.body;
     const user = await  UserModel.create({
         nome
-    })
+    });
     return res.status(201).json(user)
- }
+ };
  async update(req:Request,res:Response){}
  async destroy(req:Request,res:Response){}
 

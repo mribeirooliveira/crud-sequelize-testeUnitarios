@@ -5,7 +5,7 @@ import { router } from "./rauter"
 
 const app =  express();
 
-app.use(json)
+app.use(json())
 app.use(router)
 app.listen(3000,async()=>{
     await db.sync()
