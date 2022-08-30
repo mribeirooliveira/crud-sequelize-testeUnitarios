@@ -3,5 +3,22 @@ POST http://localhost:3000/user
 Content-Type: application/json
 
 {
-    "nome":"testou"
+    "nome":"jose"
 }
+
+### findALl
+GET http://localhost:3000/user
+
+### findOne
+GET http://localhost:3000/user/2
+
+###  update
+PUT http://localhost:3000/user/1
+Content-Type: application/json
+
+{
+    "nome":"testou2"
+}
+
+### delete
+DELETE http://localhost:3000/user/2
