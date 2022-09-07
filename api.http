@@ -1,9 +1,9 @@
 ### create
-POST http://localhost:3000/user
+POST http://localhost:3001/user
 Content-Type: application/json
 
 {
-    "nome":"jose"
+    "nome":"joseE"
 }
 
 ### findALl

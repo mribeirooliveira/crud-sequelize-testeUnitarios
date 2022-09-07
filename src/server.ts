@@ -7,7 +7,7 @@ const app =  express();
 
 app.use(json())
 app.use(router)
-app.listen(3000,async()=>{
+app.listen(3001,async()=>{
     await db.sync()
     console.log('server running')
 

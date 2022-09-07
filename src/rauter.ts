@@ -1,9 +1,9 @@
 import * as express from "express";
 import UserController from "./controller/UserController";
 
-interface Irouter{
- 
-}
+
+
+
 export const router = express.Router()
 
 router.post("/user",UserController.create);
