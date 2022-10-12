@@ -1,7 +1,13 @@
 import { Request, Response } from "express";
 import { UserModel } from "../database/models/UserModel";
-
+import { IUser } from "../UseCase/IUser";
+import { User } from "../UseCase/User";
 class UserController{
+    
+    user: IUser
+    constructor(user:IUser){
+        this.user = user
+    }
  async findAll(req:Request,res:Response){
     const users = await UserModel.findAll();
     return users.length>0
@@ -19,10 +25,16 @@ class UserController{
      :res.status(204).send();
   }
  async create(req:Request,res:Response){
-    const {nome} = req.body;
+    const { nome } = req.body;
+    console.log("Nome: <", nome, ">");
     const user = await  UserModel.create({
-        nome
+       nome
     });
+    user.save();
+  const resultado = this.user.teste('ghghg')
+  // console.log(resultado);
+
+   // const user = await  this.IIUser.crateUser(req.body)
     return res.status(201).json(user)
  };
  async update(req:Request,res:Response){
@@ -44,4 +56,4 @@ class UserController{
 
 }
 
-export default new UserController()
+export default new UserController(new User(''))

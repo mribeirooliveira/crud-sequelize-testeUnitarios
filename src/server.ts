@@ -11,4 +11,4 @@ app.listen(3001,async()=>{
     await db.sync()
     console.log('server running')
 
-}) ;                                             
+});                                             

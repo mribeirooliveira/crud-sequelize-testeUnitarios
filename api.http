@@ -7,7 +7,7 @@ Content-Type: application/json
 }
 
 ### findALl
-GET http://localhost:3000/user
+GET http://localhost:3001/user
 
 ### findOne
 GET http://localhost:3000/user/2
