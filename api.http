@@ -3,9 +3,15 @@ POST http://localhost:3001/user
 Content-Type: application/json
 
 {
-    "nome":"joseE"
+    "nome":"joseE","senha":"m"
 }
+### createTest
+POST http://localhost:3001/userTest
+Content-Type: application/json
 
+{
+    "nome":"joseE","senha":"m"
+}
 ### findALl
 GET http://localhost:3001/user
 
