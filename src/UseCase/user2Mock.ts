@@ -3,19 +3,18 @@ import { Irepository } from "../interfaces/irepository";
 import { IuseCaseUser } from "../interfaces/IusecaseUser";
 
 export class useCaseUser2Mock  implements IuseCaseUser{
-    repositoryUser:Irepository
+    repositoryUserMock:Irepository
     constructor(repoUser:Irepository){
-           this.repositoryUser=repoUser;
+           this.repositoryUserMock=repoUser;
     }
 public crateUser =(nome:string,senha:string)=>{
-  return this.repositoryUser.createUser(nome,senha)
+  return this.repositoryUserMock.createUser(nome,senha)
 }
 public findUser =(nome:string):Promise<boolean>=>{
-    console.log(this.repositoryUser.findOne(nome))
-    return  this.repositoryUser.findOne(nome)
+    return  this.repositoryUserMock.findOne(nome)
    
 }
 public loginUser =(nome:string,senha:string)=>{
-    return this.repositoryUser.login(nome,senha)
+    return this.repositoryUserMock.login(nome,senha)
 }
 }

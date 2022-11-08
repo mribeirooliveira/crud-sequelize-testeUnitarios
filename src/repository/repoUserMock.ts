@@ -12,9 +12,9 @@ export class repoUserMock implements Irepository{
     public async createUser(nome:string,senha:string):Promise<boolean> { 
         var create= true
        // condbFake= fakeDB()
-        this.dbFake.push({id:1,nome:"moises",senha:"1234"})
+        this.dbFake.push({id:1,nome:nome,senha:senha})
         const db= JSON.parse(JSON.stringify(this.dbFake)) 
-        console.log(db)
+        
         
      if(create)
      
@@ -27,7 +27,7 @@ export class repoUserMock implements Irepository{
 
        var findone= false
        //const dbFake= fakeDB()
-       this.dbFake.push({id:1,nome:"moises",senha:"1234"})
+      // this.dbFake.push({id:1,nome:"moises",senha:"1234"})
        const db= JSON.parse(JSON.stringify(this.dbFake))
        for (var i=0;i<db.length;i++){
         if(db[i].nome == userNome){
@@ -44,7 +44,7 @@ export class repoUserMock implements Irepository{
 
     var login= false
       // const dbFake= fakeDB()
-       this.dbFake.push({id:1,nome:"moises",senha:"1234"})
+      // this.dbFake.push({id:1,nome:"moises",senha:"1234"})
        const db= JSON.parse(JSON.stringify(this.dbFake))
        for (var i=0;i<db.length;i++){
         if(db[i].nome == nome && db[i].senha ){
