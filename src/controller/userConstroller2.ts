@@ -15,7 +15,7 @@ export class userController2{
      
      
         public findOne =  async (req:Request,res:Response)=>{
-         const {userNome}= req.params;   
+         const {userNome}= req.body;   
          const user = await this.useCaseUser.findUser(userNome)
          return user ? res.status(200).json(user)
          :res.status(204).send();
