@@ -20,16 +20,16 @@ describe('teste dos use case', () => {
     })
     
      const MockRequestCreate = {body:{ nome:"maria",senha:"1234"},}as Request
-     const MockRequestFindOne = {body:{ nome:"ma"},}as Request
+     const MockRequestFindOne = {body:{ nome:"maria"},}as Request
      const MockRequestLogin = {body:{ nome:"maria",senha:"1234"},}as Request
 
      it('*teste Controller *deve retornar 201 ao criar o usuario', async () => {
     expect( cltUse.create(MockRequestCreate,response as Response))
-    .resolves.toBe(response.status(200))
+    .resolves.toBe(response.status(201))
      })
      it('*teste Controller *deve retornar 200 ao achar o usuario', async () => {
     expect( cltUse.create(MockRequestFindOne,response as Response))
-    .resolves.toBe(response.status(20))
+    .resolves.toBe(response.status(200))
      })
 
      it('*teste Controller *deve retornar 200 ao logar o usuario', async () => {
