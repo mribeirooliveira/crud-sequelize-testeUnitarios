@@ -36,10 +36,6 @@ describe('teste dos use case', () => {
         expect( cltUse.create(MockRequestLogin,response as Response))
         .resolves.toBe(response.status(200))
          })
-    
-
-   //expect( cltUse.findOne(MockRequestCre,response as Response))
-   // .resolves.toBe(response.status(200))
    });
 
 
